@@ -1,0 +1,68 @@
+<!-- BƯỚC 1: Tạo file HTML cơ bản -->
+<!-- Mục đích:
+Khởi tạo một file HTML có cấu trúc chuẩn. -->
+<!-- BƯỚC 2: Kết nối với file CSS để trang đẹp hơn -->
+<!-- BƯỚC 3: Tạo khung chứa form đăng nhập -->
+<!-- BƯỚC 4: Tạo form đăng nhập -->
+<!-- BƯỚC 5: Tạo ô nhập email và mật khẩu -->
+<!-- BƯỚC 6: Tạo nút đăng nhập -->
+<!-- BƯỚC 7: Thêm checkbox “Remember me” và đường link trợ giúp -->
+<!-- BƯỚC 8: Thêm link dẫn đến trang đăng ký -->
+<!-- BƯỚC 9: Kết nối JavaScript xử lý đăng nhập -->
+<!DOCTYPE html>
+<!-- <!DOCTYPE html>: Cho trình duyệt biết bạn đang dùng HTML5. -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">: Hỗ trợ chữ có dấu (Unicode). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"...>: Giúp trang hiển thị đẹp trên điện thoại. -->
+    <title>Login</title>
+    <!-- <title>: Hiển thị trên tab trình duyệt. -->
+    <link rel="stylesheet" href="./styles/auth.css" />
+    <!-- File auth.css cần được tạo trong thư mục styles/. -->
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <!-- form-wrapper: Thẻ div dùng để bọc toàn bộ form 
+        cho dễ canh chỉnh bằng CSS. -->
+        <h2>Sign In</h2>
+        <!-- Form ở đây -->
+        <form action="#">
+            <!-- action="#": Tạm thời chưa gửi dữ liệu đến đâu
+            (sẽ xử lý sau bằng JavaScript). -->
+            <!-- Các ô nhập email và mật khẩu -->
+            <div class="form-control">
+                <input id="email" type="text" required />
+                <!-- required: Bắt buộc phải điền. -->
+                <label>Email address</label>
+            </div>
+            <div class="form-control">
+                <input id="password" type="password" required />
+                <!-- type="password": Giúp ẩn ký tự khi nhập mật khẩu. -->
+                <label>Password</label>
+                <!-- label: Hiển thị tên trường, kết hợp với CSS để tạo hiệu ứng. -->
+            </div>
+            <button type="submit">Sign In</button>
+            <!-- Khi nhấn vào, form sẽ được gửi (hoặc xử lý bằng JavaScript). -->
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me" />
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+            <!-- Người dùng có thể chọn lưu đăng nhập.
+            Có thể thêm chức năng quên mật khẩu sau này. -->
+            <p>New to MindX Cinema? <a href="./register.html">Sign up now</a></p>
+        </form>
+    </div>
+    <script src="./scripts/login.js"></script>
+    <!-- File login.js là nơi viết các chức năng xử lý
+    sau khi nhấn "Sign In".
+    Ví dụ: kiểm tra dữ liệu, chuyển trang... -->
+</body>
+
+</html>

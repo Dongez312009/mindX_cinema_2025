@@ -1,0 +1,80 @@
+<!-- Bước 1: Tạo cấu trúc cơ bản của tài liệu HTML -->
+<!-- Bước 2: Thêm liên kết tới CSS -->
+<!-- Bước 3: Tạo khung (container) cho form đăng ký -->
+<!-- Mục đích:
+    Tổ chức giao diện gọn gàng bằng một thẻ div. -->
+<!-- Bước 4: Tạo biểu mẫu (form) đăng ký -->
+<!-- Mục đích:
+    Cho phép người dùng nhập thông tin đăng ký. -->
+<!-- Bước 5: Thêm các ô nhập thông tin (input fields) -->
+<!-- Mục đích:
+    Lấy tên, email và mật khẩu từ người dùng. -->
+<!-- Bước 6: Thêm nút Sign Up -->
+<!-- Mục đích:
+    Cho người dùng bấm để gửi thông tin đăng ký. -->
+<!-- Bước 7: Thêm phần "Remember me" và trợ giúp -->
+<!-- Bước 8: Link chuyển sang trang đăng nhập -->
+<!-- Bước 9: Gắn JavaScript xử lý sự kiện đăng ký -->
+<!-- Mục đích:
+    Xử lý sự kiện khi người dùng nhấn nút "Sign Up". -->
+<!DOCTYPE html>
+<!-- <!DOCTYPE html>: Khai báo đây là HTML5. -->
+<html lang="en">
+<!-- <html lang="en">: Ngôn ngữ trang là tiếng Anh. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">: Hỗ trợ tiếng Việt và các ký tự Unicode. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"...>: Đảm bảo hiển thị tốt trên điện thoại. -->
+    <title>Register</title>
+    <!-- <title>: Tiêu đề hiển thị ở tab trình duyệt. -->
+    <link rel="stylesheet" href="./styles/auth.css" />
+    <!-- Dòng này đặt trong <head> để kết nối file CSS có tên auth.css. -->
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <!-- .form-wrapper: Dùng để nhóm các thành phần lại 
+        và dễ định dạng bằng CSS. -->
+        <h2>Sign Up</h2>
+        <!-- Form sẽ nằm ở đây -->
+        <form action="#">
+            <!-- action="#": Tạm thời không gửi dữ liệu
+            đi đâu cả (để sau xử lý bằng JS). -->
+            <!-- Các ô nhập thông tin ở đây -->
+            <div class="form-control">
+                <input id="username" type="text" required />
+                <!-- required: Bắt buộc phải điền vào mới cho đăng ký. -->
+                <label>Username</label>
+            </div>
+            <div class="form-control">
+                <input id="email" type="text" required />
+                <label>Email address</label>
+            </div>
+            <div class="form-control">
+                <input id="password" type="password" required />
+                <!-- type="password": Ẩn ký tự khi nhập mật khẩu. -->
+                <label>Password</label>
+            </div>
+            <button type="submit">Sign Up</button>
+            <!-- type="submit": Gửi form khi người dùng nhấn vào. -->
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me" />
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+            <!-- Cho phép người dùng chọn lưu thông tin đăng nhập.
+            "Need help?" là đường link trợ giúp. -->
+            <p>Already have an account? <a href="./login.html">Sign in now</a></p>
+            <!-- Nếu người dùng đã có tài khoản, 
+            họ có thể chuyển qua trang đăng nhập. -->
+        </form>
+    </div>
+
+    <script src="./scripts/register.js"></script>
+</body>
+
+</html>
